@@ -3,23 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C1BDF84BE18EA9EBC8DF9E3 /* Pods_OCRscanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEDF82E15667B4E1520C7E8 /* Pods_OCRscanner.framework */; };
 		DD34E34B2660FBF400E94A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34E34A2660FBF400E94A9F /* AppDelegate.swift */; };
 		DD34E34F2660FBF400E94A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34E34E2660FBF400E94A9F /* ViewController.swift */; };
 		DD34E3542660FBF500E94A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD34E3532660FBF500E94A9F /* Assets.xcassets */; };
 		DD34E3572660FBF500E94A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD34E3552660FBF500E94A9F /* LaunchScreen.storyboard */; };
+		DD34E3812661345E00E94A9F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DD34E3802661345E00E94A9F /* tessdata */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FEDF82E15667B4E1520C7E8 /* Pods_OCRscanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OCRscanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5EFEF395570E02F2A22673 /* Pods-OCRscanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRscanner.debug.xcconfig"; path = "Target Support Files/Pods-OCRscanner/Pods-OCRscanner.debug.xcconfig"; sourceTree = "<group>"; };
 		DD34E3472660FBF400E94A9F /* OCRscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD34E34A2660FBF400E94A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD34E34E2660FBF400E94A9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD34E3532660FBF500E94A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD34E3562660FBF500E94A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD34E3582660FBF500E94A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD34E3802661345E00E94A9F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		F1BCC6918D10520339C2E42E /* Pods-OCRscanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRscanner.release.xcconfig"; path = "Target Support Files/Pods-OCRscanner/Pods-OCRscanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C1BDF84BE18EA9EBC8DF9E3 /* Pods_OCRscanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		011636AB3FA24489B56AF863 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E5EFEF395570E02F2A22673 /* Pods-OCRscanner.debug.xcconfig */,
+				F1BCC6918D10520339C2E42E /* Pods-OCRscanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A3E9B26C1E11C5D066157BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FEDF82E15667B4E1520C7E8 /* Pods_OCRscanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD34E33E2660FBF400E94A9F = {
 			isa = PBXGroup;
 			children = (
 				DD34E3492660FBF400E94A9F /* OCRscanner */,
 				DD34E3482660FBF400E94A9F /* Products */,
+				011636AB3FA24489B56AF863 /* Pods */,
+				5A3E9B26C1E11C5D066157BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +88,7 @@
 		DD34E35E2661001400E94A9F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DD34E3802661345E00E94A9F /* tessdata */,
 				DD34E3532660FBF500E94A9F /* Assets.xcassets */,
 				DD34E3552660FBF500E94A9F /* LaunchScreen.storyboard */,
 			);
@@ -92,9 +119,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD34E35B2660FBF500E94A9F /* Build configuration list for PBXNativeTarget "OCRscanner" */;
 			buildPhases = (
+				7FC9ACB27F25297F87344A02 /* [CP] Check Pods Manifest.lock */,
 				DD34E3432660FBF400E94A9F /* Sources */,
 				DD34E3442660FBF400E94A9F /* Frameworks */,
 				DD34E3452660FBF400E94A9F /* Resources */,
+				E9EFF8EFF42F3289B1CF9EBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,10 +173,53 @@
 			files = (
 				DD34E3572660FBF500E94A9F /* LaunchScreen.storyboard in Resources */,
 				DD34E3542660FBF500E94A9F /* Assets.xcassets in Resources */,
+				DD34E3812661345E00E94A9F /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7FC9ACB27F25297F87344A02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCRscanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9EFF8EFF42F3289B1CF9EBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCRscanner/Pods-OCRscanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OCRscanner/Pods-OCRscanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OCRscanner/Pods-OCRscanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD34E3432660FBF400E94A9F /* Sources */ = {
@@ -291,6 +363,7 @@
 		};
 		DD34E35C2660FBF500E94A9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E5EFEF395570E02F2A22673 /* Pods-OCRscanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +384,7 @@
 		};
 		DD34E35D2660FBF500E94A9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1BCC6918D10520339C2E42E /* Pods-OCRscanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
