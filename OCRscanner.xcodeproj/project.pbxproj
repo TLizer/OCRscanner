@@ -9,10 +9,17 @@
 /* Begin PBXBuildFile section */
 		7C1BDF84BE18EA9EBC8DF9E3 /* Pods_OCRscanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEDF82E15667B4E1520C7E8 /* Pods_OCRscanner.framework */; };
 		DD34E34B2660FBF400E94A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34E34A2660FBF400E94A9F /* AppDelegate.swift */; };
-		DD34E34F2660FBF400E94A9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD34E34E2660FBF400E94A9F /* ViewController.swift */; };
 		DD34E3542660FBF500E94A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD34E3532660FBF500E94A9F /* Assets.xcassets */; };
 		DD34E3572660FBF500E94A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD34E3552660FBF500E94A9F /* LaunchScreen.storyboard */; };
 		DD34E3812661345E00E94A9F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DD34E3802661345E00E94A9F /* tessdata */; };
+		DD58D0862661428E002EE487 /* ImagePickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0852661428E002EE487 /* ImagePickerCoordinator.swift */; };
+		DD58D08926615537002EE487 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D08826615537002EE487 /* Coordinator.swift */; };
+		DD58D08B2661555E002EE487 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D08A2661555E002EE487 /* ApplicationCoordinator.swift */; };
+		DD58D09126615615002EE487 /* ScannerListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09026615615002EE487 /* ScannerListCoordinator.swift */; };
+		DD58D09426615646002EE487 /* ScannerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09326615646002EE487 /* ScannerListViewModel.swift */; };
+		DD58D09726615677002EE487 /* ScanerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09626615677002EE487 /* ScanerListViewController.swift */; };
+		DD58D09A2661571E002EE487 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0992661571E002EE487 /* UIImage+Extensions.swift */; };
+		DD58D09C26615AE3002EE487 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09B26615AE3002EE487 /* UITableViewCell+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +27,18 @@
 		8E5EFEF395570E02F2A22673 /* Pods-OCRscanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRscanner.debug.xcconfig"; path = "Target Support Files/Pods-OCRscanner/Pods-OCRscanner.debug.xcconfig"; sourceTree = "<group>"; };
 		DD34E3472660FBF400E94A9F /* OCRscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCRscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD34E34A2660FBF400E94A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD34E34E2660FBF400E94A9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD34E3532660FBF500E94A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD34E3562660FBF500E94A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD34E3582660FBF500E94A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD34E3802661345E00E94A9F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		DD58D0852661428E002EE487 /* ImagePickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCoordinator.swift; sourceTree = "<group>"; };
+		DD58D08826615537002EE487 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD58D08A2661555E002EE487 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		DD58D09026615615002EE487 /* ScannerListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerListCoordinator.swift; sourceTree = "<group>"; };
+		DD58D09326615646002EE487 /* ScannerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerListViewModel.swift; sourceTree = "<group>"; };
+		DD58D09626615677002EE487 /* ScanerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanerListViewController.swift; sourceTree = "<group>"; };
+		DD58D0992661571E002EE487 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		DD58D09B26615AE3002EE487 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		F1BCC6918D10520339C2E42E /* Pods-OCRscanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRscanner.release.xcconfig"; path = "Target Support Files/Pods-OCRscanner/Pods-OCRscanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +92,7 @@
 		DD34E3492660FBF400E94A9F /* OCRscanner */ = {
 			isa = PBXGroup;
 			children = (
+				DD58D09826615704002EE487 /* Extensions */,
 				DD34E3602661003100E94A9F /* Features */,
 				DD34E35F2661002300E94A9F /* SupportingFiles */,
 				DD34E35E2661001400E94A9F /* Resources */,
@@ -107,9 +122,71 @@
 		DD34E3602661003100E94A9F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				DD34E34E2660FBF400E94A9F /* ViewController.swift */,
+				DD58D08826615537002EE487 /* Coordinator.swift */,
+				DD58D08A2661555E002EE487 /* ApplicationCoordinator.swift */,
+				DD58D08E26615592002EE487 /* ScanerList */,
+				DD58D08C26615566002EE487 /* ImagePicker */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		DD58D08C26615566002EE487 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D08D2661556F002EE487 /* Coordinator */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		DD58D08D2661556F002EE487 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0852661428E002EE487 /* ImagePickerCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD58D08E26615592002EE487 /* ScanerList */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0952661566E002EE487 /* View */,
+				DD58D09226615635002EE487 /* ViewModel */,
+				DD58D08F2661559D002EE487 /* Coordinator */,
+			);
+			path = ScanerList;
+			sourceTree = "<group>";
+		};
+		DD58D08F2661559D002EE487 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D09026615615002EE487 /* ScannerListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD58D09226615635002EE487 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D09326615646002EE487 /* ScannerListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DD58D0952661566E002EE487 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D09626615677002EE487 /* ScanerListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD58D09826615704002EE487 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0992661571E002EE487 /* UIImage+Extensions.swift */,
+				DD58D09B26615AE3002EE487 /* UITableViewCell+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +303,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD34E34F2660FBF400E94A9F /* ViewController.swift in Sources */,
+				DD58D09A2661571E002EE487 /* UIImage+Extensions.swift in Sources */,
+				DD58D09726615677002EE487 /* ScanerListViewController.swift in Sources */,
+				DD58D08B2661555E002EE487 /* ApplicationCoordinator.swift in Sources */,
+				DD58D09426615646002EE487 /* ScannerListViewModel.swift in Sources */,
+				DD58D09126615615002EE487 /* ScannerListCoordinator.swift in Sources */,
+				DD58D08926615537002EE487 /* Coordinator.swift in Sources */,
+				DD58D0862661428E002EE487 /* ImagePickerCoordinator.swift in Sources */,
+				DD58D09C26615AE3002EE487 /* UITableViewCell+Extensions.swift in Sources */,
 				DD34E34B2660FBF400E94A9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
