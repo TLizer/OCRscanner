@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import MobileCoreServices
 
 final class ImagePickerCoordinator: NSObject, Coordinator {
     private let presenter: UIViewController
@@ -60,7 +59,6 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
-        imagePicker.mediaTypes = [kUTTypeImage as String]
         presenter.present(imagePicker, animated: true)
     }
     
@@ -68,16 +66,18 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
-        imagePicker.mediaTypes = [kUTTypeImage as String]
         presenter.present(imagePicker, animated: true)
     }
 }
 
 extension ImagePickerCoordinator: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let selectedPhoto = info[.originalImage] as? UIImage
+        var image = info[.originalImage] as? UIImage
+        if let cgImage = image?.cgImage {
+            image = UIImage(cgImage: cgImage, scale: image?.scale ?? 1, orientation: image?.imageOrientation ?? .up)
+        }
         presenter.dismiss(animated: true) {
-            self.resultCallback(selectedPhoto)
+            self.resultCallback(image)
         }
     }
     

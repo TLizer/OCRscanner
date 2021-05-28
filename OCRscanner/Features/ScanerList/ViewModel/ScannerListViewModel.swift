@@ -5,30 +5,51 @@
 //  Created by Tomasz Lizer on 28/05/2021.
 //
 
-import Foundation
+import UIKit
 
 final class ScannerListViewModel {
-    private unowned var scannerListCoordinator: ScannerListCoordinatorProtocol
-    private var scans: [String] = ["SCAN1", "SCAN2"]
+    private let dateFormatter = DateFormatter()
+    private unowned var coordinator: ScannerListCoordinatorProtocol
+    private let dataProvider: OCRDataProvider
+    private let ocrEngine: OCREngine
+    private var scans: [OCRScanData] = []
     
-    var reloadCallback: (() -> Void)? {
+    var reloadTableView: (() -> Void)? {
         didSet {
-            reloadCallback?()
+            reloadData()
         }
     }
     
-    init(scannerListCoordinator: ScannerListCoordinatorProtocol) {
-        self.scannerListCoordinator = scannerListCoordinator
+    var isLoading: ((Bool) -> Void)?
+    
+    init(coordinator: ScannerListCoordinatorProtocol, dataProvider: OCRDataProvider, ocrEngine: OCREngine) {
+        self.coordinator = coordinator
+        self.dataProvider = dataProvider
+        self.ocrEngine = ocrEngine
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
     }
     
     func addScan() {
-        scannerListCoordinator.presentImagePicker(handler: { selectedImage in
-            print("DEBUG - handle selected image: \(selectedImage)")
+        coordinator.presentImagePicker(handler: { [ocrEngine, isLoading] selectedImage in
+            guard let image = selectedImage else {
+                return
+            }
+            isLoading?(true)
+            ocrEngine.analyze(image: image) { [weak self] recognizedText in
+                self?.handleScan(image: image, text: recognizedText)
+            }
         })
     }
     
+    func deleteScan(at IndexPath: IndexPath) {
+        dataProvider.removeScan(scans[IndexPath.row]) { [weak self] in
+            self?.reloadData()
+        }
+    }
+    
     func displayDetails(for indexPath: IndexPath) {
-        // display details
+        coordinator.presentScanDetails(scans[indexPath.row])
     }
     
     func numberOfRows() -> Int {
@@ -36,6 +57,22 @@ final class ScannerListViewModel {
     }
     
     func data(for indexPath: IndexPath) -> String {
-        scans[indexPath.row]
+        let date = scans[indexPath.row].date
+        return dateFormatter.string(from: date)
+    }
+    
+    private func handleScan(image: UIImage, text: String?) {
+        dataProvider.addScan(text: text, image: image) { [weak self] scan in
+            self?.reloadData()
+            if let scan = scan {
+                self?.coordinator.presentScanDetails(scan)
+            }
+        }
+    }
+    
+    private func reloadData() {
+        scans = dataProvider.scans()
+        reloadTableView?()
+        isLoading?(false)
     }
 }

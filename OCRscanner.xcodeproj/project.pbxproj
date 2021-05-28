@@ -20,6 +20,19 @@
 		DD58D09726615677002EE487 /* ScanerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09626615677002EE487 /* ScanerListViewController.swift */; };
 		DD58D09A2661571E002EE487 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0992661571E002EE487 /* UIImage+Extensions.swift */; };
 		DD58D09C26615AE3002EE487 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09B26615AE3002EE487 /* UITableViewCell+Extensions.swift */; };
+		DD58D0AA266169CB002EE487 /* OCRDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D09F266169CB002EE487 /* OCRDataProvider.swift */; };
+		DD58D0AB266169CB002EE487 /* OCRDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0A0266169CB002EE487 /* OCRDataService.swift */; };
+		DD58D0AC266169CB002EE487 /* OCRScanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0A1266169CB002EE487 /* OCRScanData.swift */; };
+		DD58D0AD266169CB002EE487 /* OCRCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0A3266169CB002EE487 /* OCRCoreDataStack.swift */; };
+		DD58D0AE266169CB002EE487 /* OCRscanner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0A4266169CB002EE487 /* OCRscanner.xcdatamodeld */; };
+		DD58D0AF266169CB002EE487 /* OCRscan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0A6266169CB002EE487 /* OCRscan.swift */; };
+		DD58D0B0266169CB002EE487 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0A8266169CB002EE487 /* CoreDataStack.swift */; };
+		DD58D0B326616D5A002EE487 /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0B226616D5A002EE487 /* NSManagedObjectContext+Extensions.swift */; };
+		DD58D0B726617896002EE487 /* ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0B626617896002EE487 /* ImageStorage.swift */; };
+		DD58D0B9266178B3002EE487 /* FileManager+ImageStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0B8266178B3002EE487 /* FileManager+ImageStorage.swift */; };
+		DD58D0BD26617F23002EE487 /* OCREngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0BC26617F23002EE487 /* OCREngine.swift */; };
+		DD58D0BF26617FF3002EE487 /* TesseractOCREngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD58D0BE26617FF3002EE487 /* TesseractOCREngine.swift */; };
+		DD8401912661951F0038ADA6 /* ScanDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8401902661951F0038ADA6 /* ScanDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +52,19 @@
 		DD58D09626615677002EE487 /* ScanerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanerListViewController.swift; sourceTree = "<group>"; };
 		DD58D0992661571E002EE487 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		DD58D09B26615AE3002EE487 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		DD58D09F266169CB002EE487 /* OCRDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRDataProvider.swift; sourceTree = "<group>"; };
+		DD58D0A0266169CB002EE487 /* OCRDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRDataService.swift; sourceTree = "<group>"; };
+		DD58D0A1266169CB002EE487 /* OCRScanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRScanData.swift; sourceTree = "<group>"; };
+		DD58D0A3266169CB002EE487 /* OCRCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRCoreDataStack.swift; sourceTree = "<group>"; };
+		DD58D0A5266169CB002EE487 /* OCRscanner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OCRscanner.xcdatamodel; sourceTree = "<group>"; };
+		DD58D0A6266169CB002EE487 /* OCRscan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRscan.swift; sourceTree = "<group>"; };
+		DD58D0A8266169CB002EE487 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		DD58D0B226616D5A002EE487 /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
+		DD58D0B626617896002EE487 /* ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStorage.swift; sourceTree = "<group>"; };
+		DD58D0B8266178B3002EE487 /* FileManager+ImageStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+ImageStorage.swift"; sourceTree = "<group>"; };
+		DD58D0BC26617F23002EE487 /* OCREngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCREngine.swift; sourceTree = "<group>"; };
+		DD58D0BE26617FF3002EE487 /* TesseractOCREngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractOCREngine.swift; sourceTree = "<group>"; };
+		DD8401902661951F0038ADA6 /* ScanDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanDetailsViewController.swift; sourceTree = "<group>"; };
 		F1BCC6918D10520339C2E42E /* Pods-OCRscanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCRscanner.release.xcconfig"; path = "Target Support Files/Pods-OCRscanner/Pods-OCRscanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +118,7 @@
 		DD34E3492660FBF400E94A9F /* OCRscanner */ = {
 			isa = PBXGroup;
 			children = (
+				DD58D09D266169CB002EE487 /* Services */,
 				DD58D09826615704002EE487 /* Extensions */,
 				DD34E3602661003100E94A9F /* Features */,
 				DD34E35F2661002300E94A9F /* SupportingFiles */,
@@ -122,6 +149,7 @@
 		DD34E3602661003100E94A9F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				DD84018F266195080038ADA6 /* ScanDetails */,
 				DD58D08826615537002EE487 /* Coordinator.swift */,
 				DD58D08A2661555E002EE487 /* ApplicationCoordinator.swift */,
 				DD58D08E26615592002EE487 /* ScanerList */,
@@ -185,8 +213,91 @@
 			children = (
 				DD58D0992661571E002EE487 /* UIImage+Extensions.swift */,
 				DD58D09B26615AE3002EE487 /* UITableViewCell+Extensions.swift */,
+				DD58D0B226616D5A002EE487 /* NSManagedObjectContext+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD58D09D266169CB002EE487 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D09E266169CB002EE487 /* OCR */,
+				DD58D0A2266169CB002EE487 /* Persistence */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DD58D09E266169CB002EE487 /* OCR */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0BB26617F12002EE487 /* Engine */,
+				DD58D0BA26617F08002EE487 /* Data */,
+			);
+			path = OCR;
+			sourceTree = "<group>";
+		};
+		DD58D0A2266169CB002EE487 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0B526617875002EE487 /* LocalStorage */,
+				DD58D0B426617862002EE487 /* CoreData */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		DD58D0A7266169CB002EE487 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0A8266169CB002EE487 /* CoreDataStack.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DD58D0B426617862002EE487 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0A3266169CB002EE487 /* OCRCoreDataStack.swift */,
+				DD58D0A4266169CB002EE487 /* OCRscanner.xcdatamodeld */,
+				DD58D0A6266169CB002EE487 /* OCRscan.swift */,
+				DD58D0A7266169CB002EE487 /* Protocols */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		DD58D0B526617875002EE487 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0B626617896002EE487 /* ImageStorage.swift */,
+				DD58D0B8266178B3002EE487 /* FileManager+ImageStorage.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		DD58D0BA26617F08002EE487 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D09F266169CB002EE487 /* OCRDataProvider.swift */,
+				DD58D0A0266169CB002EE487 /* OCRDataService.swift */,
+				DD58D0A1266169CB002EE487 /* OCRScanData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DD58D0BB26617F12002EE487 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				DD58D0BC26617F23002EE487 /* OCREngine.swift */,
+				DD58D0BE26617FF3002EE487 /* TesseractOCREngine.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		DD84018F266195080038ADA6 /* ScanDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DD8401902661951F0038ADA6 /* ScanDetailsViewController.swift */,
+			);
+			path = ScanDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +415,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD58D09A2661571E002EE487 /* UIImage+Extensions.swift in Sources */,
+				DD58D0AD266169CB002EE487 /* OCRCoreDataStack.swift in Sources */,
 				DD58D09726615677002EE487 /* ScanerListViewController.swift in Sources */,
 				DD58D08B2661555E002EE487 /* ApplicationCoordinator.swift in Sources */,
 				DD58D09426615646002EE487 /* ScannerListViewModel.swift in Sources */,
 				DD58D09126615615002EE487 /* ScannerListCoordinator.swift in Sources */,
 				DD58D08926615537002EE487 /* Coordinator.swift in Sources */,
+				DD58D0B726617896002EE487 /* ImageStorage.swift in Sources */,
+				DD58D0B9266178B3002EE487 /* FileManager+ImageStorage.swift in Sources */,
+				DD58D0B0266169CB002EE487 /* CoreDataStack.swift in Sources */,
+				DD8401912661951F0038ADA6 /* ScanDetailsViewController.swift in Sources */,
+				DD58D0BD26617F23002EE487 /* OCREngine.swift in Sources */,
+				DD58D0AB266169CB002EE487 /* OCRDataService.swift in Sources */,
+				DD58D0BF26617FF3002EE487 /* TesseractOCREngine.swift in Sources */,
+				DD58D0AC266169CB002EE487 /* OCRScanData.swift in Sources */,
 				DD58D0862661428E002EE487 /* ImagePickerCoordinator.swift in Sources */,
+				DD58D0AA266169CB002EE487 /* OCRDataProvider.swift in Sources */,
+				DD58D0AE266169CB002EE487 /* OCRscanner.xcdatamodeld in Sources */,
 				DD58D09C26615AE3002EE487 /* UITableViewCell+Extensions.swift in Sources */,
+				DD58D0B326616D5A002EE487 /* NSManagedObjectContext+Extensions.swift in Sources */,
+				DD58D0AF266169CB002EE487 /* OCRscan.swift in Sources */,
 				DD34E34B2660FBF400E94A9F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +633,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DD58D0A4266169CB002EE487 /* OCRscanner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DD58D0A5266169CB002EE487 /* OCRscanner.xcdatamodel */,
+			);
+			currentVersion = DD58D0A5266169CB002EE487 /* OCRscanner.xcdatamodel */;
+			path = OCRscanner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DD34E33F2660FBF400E94A9F /* Project object */;
 }

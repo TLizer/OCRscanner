@@ -9,6 +9,7 @@ import UIKit
 
 protocol ScannerListCoordinatorProtocol: AnyObject {
     func presentImagePicker(handler: @escaping (UIImage?) -> Void)
+    func presentScanDetails(_ scan: OCRScanData)
 }
 
 final class ScannerListCoordinator: Coordinator, ScannerListCoordinatorProtocol {
@@ -21,7 +22,13 @@ final class ScannerListCoordinator: Coordinator, ScannerListCoordinatorProtocol 
     
     func start() {
         let controller = ScanerListViewController()
-        controller.viewModel = ScannerListViewModel(scannerListCoordinator: self)
+        let ocrDataService = OCRDataService(coreDataStack: OCRCoreDataStack(), imageStorage: FileManager.default)
+        let ocrEngine = TesseractOCREngine()
+        controller.viewModel = ScannerListViewModel(
+            coordinator: self,
+            dataProvider: ocrDataService,
+            ocrEngine: ocrEngine
+        )
         navigationController.pushViewController(controller, animated: true)
     }
     
@@ -33,5 +40,11 @@ final class ScannerListCoordinator: Coordinator, ScannerListCoordinatorProtocol 
                 self?.imagePickerCoordinator = nil
         })
         imagePickerCoordinator?.start()
+    }
+    
+    func presentScanDetails(_ scan: OCRScanData) {
+        let controller = ScanDetailsViewController()
+        controller.scan = scan
+        navigationController.pushViewController(controller, animated: true)
     }
 }
