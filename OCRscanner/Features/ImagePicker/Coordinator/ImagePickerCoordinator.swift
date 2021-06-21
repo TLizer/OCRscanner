@@ -73,9 +73,7 @@ final class ImagePickerCoordinator: NSObject, Coordinator {
 extension ImagePickerCoordinator: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var image = info[.originalImage] as? UIImage
-        if let cgImage = image?.cgImage {
-            image = UIImage(cgImage: cgImage, scale: image?.scale ?? 1, orientation: image?.imageOrientation ?? .up)
-        }
+        image = image?.normalizeOrientation()
         presenter.dismiss(animated: true) {
             self.resultCallback(image)
         }
