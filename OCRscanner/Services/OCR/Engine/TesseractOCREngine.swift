@@ -10,7 +10,7 @@ import TesseractOCR
 
 final class TesseractOCREngine: OCREngine {
     private lazy var tesseract: G8Tesseract? = {
-        let tesseract = G8Tesseract(language: "pol")
+        let tesseract = G8Tesseract(language: "eng+pol")
         tesseract?.engineMode = .tesseractOnly
         tesseract?.pageSegmentationMode = .auto
         return tesseract
